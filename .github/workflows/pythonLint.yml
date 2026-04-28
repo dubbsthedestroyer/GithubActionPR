@@ -1,11 +1,12 @@
 name: Python linting
-security-events: read
+
 
 on: 
   - workflow_dispatch
 
 jobs:
   lintingOperation:
+    security-events: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
