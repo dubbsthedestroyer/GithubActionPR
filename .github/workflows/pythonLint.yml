@@ -3,10 +3,10 @@ name: Python linting
 
 on: 
   - workflow_dispatch
+  - pull_request
 
 jobs:
   lintingOperation:
-    security-events: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -14,6 +14,6 @@ jobs:
         with:
           python-version: '3.13'
       
-      - uses: advanced-security/python-lint-code-scanning-action@v1
+      - uses: psf/black@stabe
         with:
           linter: flake8
